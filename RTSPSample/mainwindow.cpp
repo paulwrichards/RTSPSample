@@ -70,6 +70,8 @@ void MainWindow::onStartBtnClicked()
 void MainWindow::onStopBtnClicked()
 {
     stopLiveStream();
+    isStreaming = false;
+    mp = nullptr;
 }
 void MainWindow::startMediaPlayer(libvlc_media_player_t *mPlayer , HWND hWnd)
 {
@@ -103,6 +105,7 @@ void MainWindow::stopMediaPlayer(libvlc_media_player_t *mPlayer)
         /* Free the media_player */
         libvlc_media_player_release (mPlayer);
     }
+
 }
 
 void MainWindow::showMessage(QString msg)
