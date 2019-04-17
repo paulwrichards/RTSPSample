@@ -16,7 +16,7 @@
 #### Use libVLC to play RTSP/DSHOW/FILE
 
 - Refer to this code snippet
-
+```
     libvlc_instance_t * inst;
     libvlc_media_player_t * mp;
     libvlc_media_t * m;
@@ -67,3 +67,4 @@
         showMessage("Can not open your live stream.");
         return;
     }
+```
